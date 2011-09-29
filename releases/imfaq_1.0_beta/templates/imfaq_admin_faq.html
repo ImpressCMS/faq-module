@@ -1,0 +1,28 @@
+<{if $imfaq_faq_title}>
+	<h1><{$imfaq_faq_title}></h1>
+<{/if}>
+<{if $imfaq_faq_info}>
+	<p><{$imfaq_faq_info}></p>
+<{/if}>
+
+<{if $imfaq_faq_table}>
+	<{$imfaq_faq_table}>
+<{/if}>
+
+<{if $imfaq_admin_index}>
+<form><div style="margin-bottom: 24px;">
+<input type='button' name='button' onclick="location='category.php?op=mod'" value='<{$smarty.const._AM_IMFAQ_CATEGORY_CREATE}>'>&nbsp;&nbsp;
+<input type='button' name='button' onclick="location='faq.php?op=mod'" value='<{$smarty.const._AM_IMFAQ_FAQ_CREATE}>'>&nbsp;&nbsp;
+</div></form>
+<{/if}>
+
+<{if $imfaq_submitted_faqs_table}>
+	<{$imfaq_submitted_faqs_table}>
+<{/if}>
+<{if $imfaq_requested_faqs_table}>
+	<{$imfaq_requested_faqs_table}>
+<{/if}>
+
+<{if $addfaq}>
+	<{includeq file='db:system_common_form.html' form=$addfaq}>
+<{/if}>

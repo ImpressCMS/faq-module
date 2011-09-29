@@ -1,0 +1,15 @@
+<ul style="padding:0px 5px;">
+  <{foreach item=imfaq_categ from=$block.categories}>
+	<li<{if $sub}> class="imfaq-categlist-subcat"<{/if}>><{$imfaq_categ.cat_menutitle_link}>
+	  <{if $imfaq_categ.cat_hassubs && ($block.displaysubs != 1 || $display_subs != 1)}>
+	    <{if ($block.displaysubs == 2 || $display_subs == 2)}>
+          <{if ($block.current == $imfaq_categ.cat_id || $current == $imfaq_categ.cat_id)}>  
+            <{include file='db:imfaq_categlist.html' block=$imfaq_categ display_subs=$block.displaysubs current=$block.current sub=1}>
+          <{/if}>
+        <{else}>
+          <{include file='db:imfaq_categlist.html' block=$imfaq_categ display_subs=$block.displaysubs current=$block.current sub=1}>
+        <{/if}>
+	  <{/if}>
+	</li>
+  <{/foreach}>
+</ul>

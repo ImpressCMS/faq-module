@@ -1,0 +1,41 @@
+<{includeq file='db:faq_header.html'}>
+
+<{if $faq_faq}>
+	<div class="faq-faq-container">
+		<h1><{$faq_faq.faq_title}> <{if $faq_faq.userCanEditAndDelete}><{$faq_faq.editItemLink}><{$faq_faq.deleteItemLink}><{/if}></h1>
+		<{if $show_faq_info}>
+		  <div class="faq-faq-info"><{$faq_faq.faq_info}></div>
+		<{/if}>  
+		<div><{$faq_faq.faq_answer}></div>
+		<{if $faq_faq.faq_attachments}>
+		  <h3><{$smarty.const._CO_FAQ_FAQ_LEARNMORE}></h3>
+		  <div><{$faq_faq.faq_attachments}></div>
+		<{/if}>
+	</div>
+	<div class="faq-nav">
+	  <{if $faq_faq.prev}>
+	    <div class="faq-prev"><{$faq_faq.prev.faq_menutitle_link}></div>
+	  <{/if}>
+	  <{if $faq_faq.next}>
+	    <div class="faq-next"><{$faq_faq.next.faq_menutitle_link}></div>
+	  <{/if}>
+	</div>
+	<br style="clear:both;" />
+	<div class="faq_rss"><a href="<{$faq_faq.printLink}>"><img src="<{$faq_url}>images/print.gif" alt="Print this FAQ" title="Print this FAQ"></a></div>
+
+	<{includeq file='db:faq_footer.html'}>
+<{/if}>
+<{if $faq_faq_table}>
+	<h1><{$faq_title}></h1>
+	<{$faq_faq_table}>
+	<{includeq file='db:faq_footer.html'}>
+<{/if}>
+<{if $faq_faqform}>
+    <{if $module_requestintromsg}>
+      <div class="faq-request-intro"><{$module_requestintromsg}></div>
+    <{/if}>
+	<{includeq file='db:system_common_form.html' form=$faq_faqform}>
+<{/if}>
+<{if $icmspersistable_delete_confirm}>
+	<{$icmspersistable_delete_confirm}>
+<{/if}>

@@ -1,0 +1,124 @@
+/**
+* Specific CSS for the module (RTL)
+*
+* @copyright	INBOX International
+* @license		http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License (GPL)
+* @since		1.0
+* @author		Rodrigo Pereira Lima <rodrigo@inboxinternational.com>
+* @package		faq
+* @version		$Id: 2011-04-08 14:01:04Z blauer-fisch $
+*/
+
+.faq_headertable {padding: 0; margin: 0; border-bottom: 1px solid; margin-bottom: 10px;}
+.faq_modulename {font-size: 80%; text-align: left; font-weight: bold; padding-right: 0.3em;	line-height: 18px;}
+.faq_breadcrumb {font-size: 80%; line-height: 18px;}
+.faq_adminlinks {padding-top: 15px; padding-bottom: 5px; font-size: 0.8em; text-align: center; line-height: 18px;}
+
+.faq-category-container { margin-top: 12px; margin-bottom: 6px; }
+.faq-faq-container { margin-bottom: 6px; }
+.faq-faq-container.border, .faq-category-container.border {
+	border: 1px solid #333;
+	border-left: none;
+	border-right: none;
+	padding: 5px 0px;
+}
+
+.faq-category-subcats {  }
+
+.faq-faq-container h1, .faq-category-container h1 {
+	margin-top: 10px;
+	margin-bottom:1px;
+	padding-bottom:3px;
+}
+.faq-category-container h2 { margin-top: 10px !important; margin-bottom: 1px; padding-bottom: 3px; }
+.faq-faq-container ul li, .faq-category-container ul li {
+    
+}
+.faq-faq-container ul { background-image: none; }
+.faq-faq-info {
+	line-height:22px;
+	margin:0 0 10px 0px;
+	font-size: 80%;
+	background: #efefef;
+	text-align: right;
+}
+.faq-faq-teaser, .faq-category-description {clear:both;margin:0; overflow:hidden; text-align:left;}
+.faq-faq-readmore { font-size: 80%; text-align:right; padding-bottom:3px; }
+.faq-faq-categories {
+	background: url(images/cat.png) no-repeat left center;
+	padding: 0px 20px;
+	display: block;
+	float: left;
+}
+.left_main {
+	padding: 0 10px 8px 0;
+	display:block;
+	float: left;
+	width:100%;
+	line-height:17px;
+	height:15px;
+	text-align:right;
+	vertical-align:top;
+}
+.faq-faq-filed_under {
+	float: left;
+}
+.faq-faq-comments_container {}
+.faq-faq-comments {
+	background-image: url(images/comments.gif);
+	background-repeat: no-repeat;
+	margin:5px 0 0 0;
+	padding-left: 15px;
+	font-size: 80%;
+	float: left;
+}
+.faq-faq-more {
+	margin:5px 0 0 0;
+	font-size: 80%;
+}
+.faq_admin_links {
+	margin:5px 0 0 0;
+}
+.faq_navbar {
+	text-align: right;
+}
+.faq_rss {
+	text-align: right;
+	padding-top: 10px;
+}
+.faq_module_header, faq_module_footer {
+    margin: 10px 0px;
+}
+
+.faq-request-intro {
+    margin: 10px 0px;
+}
+
+.faq-nav {
+	border-top: 1px solid #333;
+	padding: 5px;
+}
+.faq-prev {
+    float: left;
+	background: url(images/previous.png) no-repeat left center;
+	padding-left: 25px;
+}
+.faq-next {
+    float: right;
+	background: url(images/next.png) no-repeat right center;
+	padding-right: 25px;
+}
+.faq-faq-question p, .faq-category-title { font-weight: bold; background: url(images/cat.png) no-repeat left 3px; padding-left: 25px; padding-top: 2px; }
+.faq-category-description p { margin-top: 0; padding-top: 0; }
+
+.faq-categlist-subcat {
+	font-size: 95%;
+	font-weight: normal;
+	line-height: 1.1em;
+	list-style-type: none !important;
+	background-image: url(images/bullet-small.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px !important;
+	border-style: none !important;
+}

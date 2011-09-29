@@ -1,0 +1,14 @@
+<{if $imfaq_attachment_title}>
+	<h1><{$imfaq_attachment_title}></h1>
+<{/if}>
+<{if $imfaq_attachment_info}>
+	<p><{$imfaq_attachment_info}></p>
+<{/if}>
+
+<{if $imfaq_attachment_table}>
+	<{$imfaq_attachment_table}>
+<{/if}>
+
+<{if $addattachment}>
+	<{includeq file='db:system_common_form.html' form=$addattachment}>
+<{/if}>

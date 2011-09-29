@@ -1,0 +1,18 @@
+<!-- Thank you for keeping this line in the template :-) //-->
+<!-- <{$ref_smartfactory}> //-->
+<!-- Thank you for keeping this line in the template :-) //-->
+
+<div class="faq_headertable">
+	<{if $faq_module_home}>
+		<span class="faq_modulename"><{$faq_module_home}></span>
+	<{/if}>
+	<{if $faq_category_path}>
+		<span class="faq_breadcrumb">
+		<{if $faq_module_home}>
+			&gt;
+		<{/if}>
+	  	<{$faq_category_path}></span>
+	<{/if}>
+</div>
+
+<div id="faq_submit" style="clear: both;"><{if $faq_showSubmitLink && $faq_userCanSubmit}><a href="<{$faq_url}>post.php?op=mod"><{$smarty.const._MI_FAQ_POST_ADD}></a><{/if}></div>

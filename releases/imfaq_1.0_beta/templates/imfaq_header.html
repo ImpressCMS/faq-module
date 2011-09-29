@@ -1,0 +1,18 @@
+<!-- Thank you for keeping this line in the template :-) //-->
+<!-- <{$ref_smartfactory}> //-->
+<!-- Thank you for keeping this line in the template :-) //-->
+
+<div class="imfaq_headertable">
+	<{if $imfaq_module_home}>
+		<span class="imfaq_modulename"><{$imfaq_module_home}></span>
+	<{/if}>
+	<{if $imfaq_category_path}>
+		<span class="imfaq_breadcrumb">
+		<{if $imfaq_module_home}>
+			&gt;
+		<{/if}>
+	  	<{$imfaq_category_path}></span>
+	<{/if}>
+</div>
+
+<div id="imfaq_submit" style="clear: both;"><{if $imfaq_showSubmitLink && $imfaq_userCanSubmit}><a href="<{$imfaq_url}>post.php?op=mod"><{$smarty.const._MI_IMFAQ_POST_ADD}></a><{/if}></div>

@@ -1,0 +1,33 @@
+<{if $imfaq_rss_url}>
+	<div class="imfaq_rss"><a href="<{$imfaq_rss_url}>"><img src="<{$imfaq_url}>images/rss.png" alt="<{$imfaq_rss_info}>" title="<{$imfaq_rss_info}>"></a></div>
+<{/if}>
+<{if $imfaq_is_admin}>
+	<div class="imfaq_adminlinks"><{$imfaq_adminpage}></div>
+<{/if}>
+
+<{if $module_footer}>
+	<div class="imfaq_module_footer"><{$module_footer}></div>
+<{/if}>
+
+<{if $imfaq_faq_comment}>
+ 	<table id="comments_container" border="0" width="100%" cellspacing="1" cellpadding="0" align="center" >
+   		<tr>
+		    <td colspan="3" align ="<{$smarty.const._GLOBAL_LEFT}>">
+		    	<div style="text-align: center; padding: 3px; margin:3px;"> <{$commentsnav}> <{$lang_notice}></div>
+      		  	<div style="margin:3px; padding: 3px;">
+			        <!-- start comments loop -->
+			        <{if $comment_mode == "flat"}>
+			        	<{include file="db:system_comments_flat.html"}>
+			        <{elseif $comment_mode == "thread"}>
+			        	<{include file="db:system_comments_thread.html"}>
+			        <{elseif $comment_mode == "nest"}>
+			        	<{include file="db:system_comments_nest.html"}>
+			        <{/if}>
+			        <!-- end comments loop -->
+		      	</div>
+			</td>
+   		</tr>
+  </table>
+<{/if}>
+
+<{includeq file='db:system_notification_select.html'}>

@@ -1,0 +1,41 @@
+<{includeq file='db:imfaq_header.html'}>
+
+<{if $imfaq_faq}>
+	<div class="imfaq-faq-container">
+		<h1><{$imfaq_faq.faq_title}> <{if $imfaq_faq.userCanEditAndDelete}><{$imfaq_faq.editItemLink}><{$imfaq_faq.deleteItemLink}><{/if}></h1>
+		<{if $show_faq_info}>
+		  <div class="imfaq-faq-info"><{$imfaq_faq.faq_info}></div>
+		<{/if}>  
+		<div><{$imfaq_faq.faq_answer}></div>
+		<{if $imfaq_faq.faq_attachments}>
+		  <h3><{$smarty.const._CO_IMFAQ_FAQ_LEARNMORE}></h3>
+		  <div><{$imfaq_faq.faq_attachments}></div>
+		<{/if}>
+	</div>
+	<div class="imfaq-nav">
+	  <{if $imfaq_faq.prev}>
+	    <div class="imfaq-prev"><{$imfaq_faq.prev.faq_menutitle_link}></div>
+	  <{/if}>
+	  <{if $imfaq_faq.next}>
+	    <div class="imfaq-next"><{$imfaq_faq.next.faq_menutitle_link}></div>
+	  <{/if}>
+	</div>
+	<br style="clear:both;" />
+	<div class="imfaq_rss"><a href="<{$imfaq_faq.printLink}>"><img src="<{$imfaq_url}>images/print.gif" alt="Print this FAQ" title="Print this FAQ"></a></div>
+
+	<{includeq file='db:imfaq_footer.html'}>
+<{/if}>
+<{if $imfaq_faq_table}>
+	<h1><{$imfaq_title}></h1>
+	<{$imfaq_faq_table}>
+	<{includeq file='db:imfaq_footer.html'}>
+<{/if}>
+<{if $imfaq_faqform}>
+    <{if $module_requestintromsg}>
+      <div class="imfaq-request-intro"><{$module_requestintromsg}></div>
+    <{/if}>
+	<{includeq file='db:system_common_form.html' form=$imfaq_faqform}>
+<{/if}>
+<{if $icmspersistable_delete_confirm}>
+	<{$icmspersistable_delete_confirm}>
+<{/if}>

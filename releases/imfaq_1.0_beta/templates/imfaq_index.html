@@ -1,0 +1,33 @@
+<{includeq file='db:imfaq_header.html'}>
+
+<{if $module_header}>
+  <div class="imfaq_module_header"><{$module_header}></div>
+<{/if}>
+
+<{foreach item=imfaq_category from=$imfaq_categories}>
+	<div class="imfaq_category_container odd">
+      <h1><{if $imfaq_category.userCanEditAndDelete}><{$imfaq_category.editItemLink}><{$imfaq_category.deleteItemLink}><{/if}> <{$imfaq_category.cat_title}></h1>
+	  <{if $displaytopcatdsc}>
+	  	<div class="imfaq-category-description"><{$imfaq_category.cat_description}></div>
+	  	<div class="imfaq-faq-readmore"><a href="<{$imfaq_category.itemLink}>"><{$smarty.const._CO_IMFAQ_READMORE}></a></div>
+	  <{/if}>
+	  <{if $displaysubcatonindex && $imfaq_category.cat_hassubs}>
+	  <div class="imfaq-category-subcats">
+		<{foreach item=sub from=$imfaq_category.categories}>
+		  <div class="imfaq_category_container even" style="margin-bottom:2px;">
+     	    <h1><{if $sub.userCanEditAndDelete}><{$sub.editItemLink}><{$sub.deleteItemLink}><{/if}> <{$sub.cat_title}></h1>
+	 		<{if $displaysubcatdsc}>
+	 		  <div class="imfaq-category-description"><{$sub.cat_description}></div>
+	 		  <div class="imfaq-faq-readmore"><a href="<{$sub.itemLink}>"><{$smarty.const._CO_IMFAQ_READMORE}></a></div>
+	 		<{/if}>
+		  </div>
+		<{/foreach}>
+	  </div>
+	  <{/if}>
+	</div>
+<{/foreach}>
+<{if $navbar}>
+  <div class="imfaq_navbar"><{$navbar}></div>
+<{/if}>
+
+<{includeq file='db:imfaq_footer.html'}>

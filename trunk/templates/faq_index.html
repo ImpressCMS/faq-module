@@ -1,0 +1,33 @@
+<{includeq file='db:faq_header.html'}>
+
+<{if $module_header}>
+  <div class="faq_module_header"><{$module_header}></div>
+<{/if}>
+
+<{foreach item=faq_category from=$faq_categories}>
+	<div class="faq_category_container odd">
+      <h1><{if $faq_category.userCanEditAndDelete}><{$faq_category.editItemLink}><{$faq_category.deleteItemLink}><{/if}> <{$faq_category.cat_title}></h1>
+	  <{if $displaytopcatdsc}>
+	  	<div class="faq-category-description"><{$faq_category.cat_description}></div>
+	  	<div class="faq-faq-readmore"><a href="<{$faq_category.itemLink}>"><{$smarty.const._CO_FAQ_READMORE}></a></div>
+	  <{/if}>
+	  <{if $displaysubcatonindex && $faq_category.cat_hassubs}>
+	  <div class="faq-category-subcats">
+		<{foreach item=sub from=$faq_category.categories}>
+		  <div class="faq_category_container even" style="margin-bottom:2px;">
+     	    <h1><{if $sub.userCanEditAndDelete}><{$sub.editItemLink}><{$sub.deleteItemLink}><{/if}> <{$sub.cat_title}></h1>
+	 		<{if $displaysubcatdsc}>
+	 		  <div class="faq-category-description"><{$sub.cat_description}></div>
+	 		  <div class="faq-faq-readmore"><a href="<{$sub.itemLink}>"><{$smarty.const._CO_FAQ_READMORE}></a></div>
+	 		<{/if}>
+		  </div>
+		<{/foreach}>
+	  </div>
+	  <{/if}>
+	</div>
+<{/foreach}>
+<{if $navbar}>
+  <div class="faq_navbar"><{$navbar}></div>
+<{/if}>
+
+<{includeq file='db:faq_footer.html'}>
